@@ -1,0 +1,33 @@
+.cell {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 0.5px solid var(--color-text);
+    box-sizing: border-box;
+    user-select: none;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.cell div {
+    position: absolute;
+    font: 1.5em sans-serif;
+    width: inherit;
+    height: inherit;
+    user-select: none;
+}
+
+.wall {
+    background-color: #8d99ae !important;
+}
+
+.row {
+    margin: 0;
+    height: 30px;
+}
+
+.grid {
+    background-color: var(--color-background);
+    width: max-content;
+    user-select: none;
+}

@@ -1,0 +1,11 @@
+.controlbar button,  .controlbar select{
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid  var(--color-text);
+    outline: none;
+    margin-right: 5px;
+}
+
+.controlbar {
+    margin-bottom: 10px;
+}

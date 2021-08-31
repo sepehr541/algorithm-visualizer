@@ -1,8 +1,8 @@
 .cell {
     display: inline-block;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: var(--cell-size);
+    height: var(--cell-size);
     border: 0.5px solid var(--color-text);
     box-sizing: border-box;
     user-select: none;
@@ -23,11 +23,12 @@
 
 .row {
     margin: 0;
-    height: 30px;
+    height: var(--cell-size);
 }
 
 .grid {
     background-color: var(--color-background);
     width: max-content;
     user-select: none;
+    margin: auto;
 }

@@ -1,6 +1,7 @@
 :root {
-  --color-text: #be00fe;
-  --color-background: #182952;
+  --color-text: #8D9DDD;
+  --color-background: #12130f;
+  --cell-size: 30px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 

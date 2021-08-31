@@ -12,17 +12,11 @@ import AlgMap from './path-finding-algorithms/index';
 import { isPath } from './path-finding-algorithms/Utils';
 import GenerateMaze from './maze-algorithms/RecursiveDivision';
 
-
-const ColorMap = {
-  visited: '#F638DC',
-  path: '#00FF7F'
-}
-
-const paintCellsAnimated = (cellsToPaint, duration, color) => {
+const paintCellsAnimated = (cellsToPaint, duration, className) => {
   return Promise.all(cellsToPaint.map((cell, i) => {
     const elm = document.getElementById(`${cell.i}.${cell.j}`);
     return new Promise((resolve) => setTimeout(() => {
-      elm.style.backgroundColor = color;
+      elm.classList.add(className);
       resolve()
     }, duration * i));
   }));
@@ -31,7 +25,7 @@ const paintCellsAnimated = (cellsToPaint, duration, color) => {
 const paintInstantly = (visited, path) => {
   visited.forEach(cell => {
     const elm = document.getElementById(`${cell.i}.${cell.j}`);
-    elm.style.backgroundColor = ColorMap[isPath(path, cell) ? 'path' : 'visited'];
+    elm.classList.add(isPath(path, cell) ? 'pathInstant' : 'visitedInstant');
   });
 };
 
@@ -39,14 +33,17 @@ const clearPaint = () => {
   for (let i = 0; i < HEIGHT; i++) {
     for (let j = 0; j < WIDTH; j++) {
       const elm = document.getElementById(`${i}.${j}`);
-      elm.style.backgroundColor = 'transparent';
+      elm.classList.remove('visited');
+      elm.classList.remove('path');
+      elm.classList.remove('visitedInstant');
+      elm.classList.remove('pathInstant');
     }
   }
 };
 
 const animate = async (visited, path) => {
-  await paintCellsAnimated(visited, 25, ColorMap.visited);
-  await paintCellsAnimated(path, 30, ColorMap.path);
+  await paintCellsAnimated(visited, 25, 'visited');
+  await paintCellsAnimated(path, 30, 'path');
 }
 
 const runAlgorithmAnimated = async (alg, walls, start, end) => {

@@ -40,3 +40,61 @@
 html {
   background-color: var(--color-background);
 }
+
+.visited {
+  animation: visitedAnimation 1.5s ease-out forwards;
+}
+
+.path {
+  animation: pathAnimation 1.2s ease-out alternate-reverse infinite forwards;
+}
+
+.visitedInstant {
+  background-color: #c874b2;
+}
+
+.pathInstant {
+  background-color: rgba(0, 0, 66, 0.75);
+}
+
+@keyframes visitedAnimation {
+  0% {
+    background-color: #29B6F6
+  }
+  25% {
+    scale: 1.1;
+  }
+  50% {
+    scale: 1.1;
+    background-color: #3949AB;
+  }
+  75% {
+    scale: 1;
+    background-color: #512DA8
+  }
+  100% {
+    scale: 1;
+    background-color: #4527A0;
+    border-color: #4527A0;;
+  }
+}
+
+@keyframes pathAnimation {
+  0% {
+      background-color: rgba(0, 0, 66, 0.75);
+  }
+  15% {
+    background-color: #430d4b;
+  }
+  35% {
+    background-color: #7b337d
+  }
+  50% {
+    background-color: rgba(0, 0, 66, 0.75);
+    border-color: #7b337d;
+  }
+  100% {
+    background-color: rgba(0, 0, 66, 0.75);
+    border-color: #7b337d;
+  }
+}

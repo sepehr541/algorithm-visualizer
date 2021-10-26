@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Path Finding Algorithm Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Path Finding Algorithms are facinating to watch. Seeing the computer finds its way to the destination, avoiding the walls, and change its approach based on the algorithm chosen is not only fun, but also a great way to learn about searching in general. Search algorithms are critical to computer science and a visual comparision is a great way to see their differences.
 
-## Available Scripts
+This project uses React JS, ReactD&D, and lodash.
 
-In the project directory, you can run:
+## Algorithms
 
-### `yarn start`
+- Dijkstra's
+- Greedy Breadth First Search
+- A*
+- Depth First Search
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to Use
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You can interact with the website by selecting the algorith you want and clicking on "Run Algorithm" to start the visualization.
 
-### `yarn test`
+You can drag and drop both the source and the destination to any cell on the grid. You can also click and drag on empty cells to draw walls.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After the algorithm is finished it's animated run, you can drag the source or destination around
+to see and on-the-fly visualization of the new positioning.
 
-### `yarn build`
+Use the reset button to remove all the walls and the painted cells. (i.e get a clear grid)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+there is also a maze generator to generate a maze without drawing walls yourself.

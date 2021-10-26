@@ -74,18 +74,20 @@ function App() {
 
   const AlgKeys = Object.keys(AlgMap);
   const [alg, setAlg] = useState(AlgKeys[0]);
+  const clear = () => {
+    setAnimated(false);
+    setWalls([]);
+    clearPaint();
+  };
 
   return <DndProvider backend={HTML5Backend}>
     <ControlBar
       algKeys={AlgKeys}
       setAlg={setAlg}
       runAlg={async () => { setAnimated(true); await runAlgorithmAnimated(AlgMap[alg], walls, source, dest) }}
-      clear={() => {
-        setAnimated(false);
-        setWalls([]);
-        clearPaint();
-      }}
+      clear={clear}
       generateMaze={() => { 
+        clear();
         const newWalls = GenerateMaze(0, 0, WIDTH, HEIGHT, source, dest);
         setWalls(newWalls);
       }}

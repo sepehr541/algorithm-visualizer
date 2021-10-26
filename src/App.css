@@ -46,7 +46,7 @@ html {
 }
 
 .path {
-  animation: pathAnimation 1.2s ease-out alternate-reverse infinite forwards;
+  animation: pathAnimation 1.4s ease-out alternate-reverse infinite forwards;
 }
 
 .visitedInstant {

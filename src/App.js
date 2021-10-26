@@ -86,7 +86,7 @@ function App() {
         clearPaint();
       }}
       generateMaze={() => { 
-        const newWalls = GenerateMaze(0, 0, WIDTH, HEIGHT);
+        const newWalls = GenerateMaze(0, 0, WIDTH, HEIGHT, source, dest);
         setWalls(newWalls);
       }}
     />
